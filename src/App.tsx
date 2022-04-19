@@ -46,7 +46,6 @@ const App: FunctionComponent =() => {
           setTask("");
           setDeadline(0);
         }      
-      
     }
 
     const completeTask = (taskNameToDelete: string): void =>{
@@ -56,10 +55,6 @@ const App: FunctionComponent =() => {
         })
       )
     }
-
-
-
-  
 
   return (
     <div className="App">
