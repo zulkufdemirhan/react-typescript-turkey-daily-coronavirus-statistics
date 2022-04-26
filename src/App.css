@@ -7,13 +7,11 @@
   font-family: Arial, Helvetica, sans-serif;
   justify-content: space-evenly;
 }
-
 body {
   margin: 0%;
   padding: 0%;
   background-color: rgb(172, 197, 230);
 }
-
 .header {
   flex: 30% 1;
     background-color: #9d8782cc;
@@ -24,12 +22,10 @@ body {
     align-items: center;
     border-radius: 10px;
 }
-
 .header .inputContainer {
   display: flex;
   flex-direction: column;
 }
-
 .header input {
   width: 200px;
   height: 40px;
@@ -40,7 +36,6 @@ body {
   font-size: 17px;
   border: 1px solid grey;
 }
-
 .header button {
   width: 70px;
   height: 87px;
@@ -66,7 +61,6 @@ body {
   color: white;
   margin: 15px;
 }
-
 .task .content {
   flex: 80%;
   height: 100%;
@@ -74,7 +68,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .task .content span {
   display: grid;
   place-items: center;
@@ -85,7 +78,6 @@ body {
   border-right: none;
   background-color: #9d8782cc;
 }
-
 .task button {
   flex: 20%;
   height: 100%;
@@ -96,18 +88,15 @@ body {
   color: white;
   cursor: pointer;
 }
-
 .covidPanel {
   border: 1px solid rgb(226, 232, 240);
   margin-right: 10vh;
   border-radius: 10px;
 }
-
 p {
   padding-left: 5px;
   color: white;
 }
-
 .covidSearch {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
