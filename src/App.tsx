@@ -4,9 +4,7 @@ import './App.css';
 import { ITodoType } from './TodoType';
 import Todo from './Components/Todo';
 
-
 const App: FunctionComponent =() => {
-
   const [date,setDate]=useState<any>();
   const [covid,setCovid]=useState<any>();
   const [cases,setCases]=useState<string>("");
@@ -18,7 +16,6 @@ const App: FunctionComponent =() => {
     setCases(res.data[date].cases)
     setTest(res.data[date].tests)
   }
-
   useEffect(()=>{
     getApi()
   },[date])
@@ -36,7 +33,6 @@ const App: FunctionComponent =() => {
     }
 
     const addBtn=()=>{
-
         if(task==""){ 
           alert("write something")
         }else{
@@ -44,8 +40,7 @@ const App: FunctionComponent =() => {
           setTodoList([...todoList , newTask]);
           setTask("");
           setDeadline(0);
-        }      
-    }
+        }}
 
     const completeTask = (taskNameToDelete: string): void =>{
       setTodoList(
@@ -57,39 +52,30 @@ const App: FunctionComponent =() => {
 
   return (
     <div className="App">
-        
         <h2> Turkey COVID - Coronavirus Statistics / ToDo List </h2>
-        
         <div className='header'>
-            
             <div className='covidPanel'>
               <div>
                 <input className='covidSearch' placeholder='Example: 17/04/2020' value={date} onChange={e=>setDate(e.target.value)}/>
               </div>
-            
               <p> Tests: {test} </p>
               <p> Cases: {cases} </p>
               <p> Deaths: {covid} </p>
             </div> 
-
-
             <div className='inputContainer'>
                   <input type="text" placeholder='task' name='task' value={task} onChange={taskChange}/>
                   <input type="number" placeholder='deadline' name="deadline" value={deadline} onChange={taskChange} />
             </div>
             <button onClick={addBtn}>Add</button>
-
         </div>
             <div className='todoList'>
               {todoList.map((task:ITodoType,key:Number)=>{
                 return <Todo  task={task} completeTask={completeTask}  />
               })}
             </div>
-        
             <footer>
             <p>This application updates data sets by scarping data from the web site of of Turkish Ministry of Health <a href='https://covid19.saglik.gov.tr/'>(https://covid19.saglik.gov.tr/)</a> every 5 minutes. </p>
           </footer>       
-        
     </div>
   )
 }
