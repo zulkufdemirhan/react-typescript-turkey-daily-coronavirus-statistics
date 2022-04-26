@@ -4,7 +4,6 @@ interface Props{
     task:ITodoType
     completeTask(taskNameToDelete: string): void;
 }
-
 const Todo=({task,completeTask}:Props)=> {
 return (
     <div className="task">
@@ -15,13 +14,8 @@ return (
     <button
         onClick={() => {
             completeTask(task.taskName);
-        }}
-    >
-        X
-    </button>
+        }}>X</button>
     </div>
     );
-
 }
-
 export default Todo;
