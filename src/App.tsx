@@ -22,7 +22,6 @@ const App: FunctionComponent =() => {
   useEffect(()=>{
     getApi()
   },[date])
-// !-------------------------------------------------------------------------------------------------------------------------
 
     const [task,setTask]=useState<string>("");
     const [deadline,setDeadline]=useState<number>(0);
